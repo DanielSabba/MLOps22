@@ -144,12 +144,18 @@ We will compare our improved baseline with market common implementations with se
     * If there is a substantial change in the customer's business workflow, make a before/after diagram showing the data flow.
 
 ## Communication
-* Our team for this project:
-	* Daniel Sabba
-	* Yossi Gavriel
-	* Jonathan Erell
-	* Guy Sedan 
-	
-* Who are the contact persons on both sides?
+**Our team for this project:**<br>
+
+* Daniel Sabba
 * Yossi Gavriel
-* DR. Ishay
+* Jonathan Erell
+* Guy Sedan
+<br>
+The point of contact from the point of view of the client side is Yossi Gavriel.
+We will meet via Zoom for a meeting of two hours once a week to update each other about our
+progress. At these meetings, each team member will have an opportunity to ask questions about
+things that prevent him from making progress, and other team members will help him to find
+solutions. If nobody can help, we will forward the question to the course lecturer. At these meetings,
+each team member will also have an opportunity to propose new ideas, and the team will decide
+whether it is a good idea for the project. We will also communicate via a group in WhatsApp,
+mainly for administrative tasks such as scheduling weekly meetings.
