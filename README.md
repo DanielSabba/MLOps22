@@ -55,15 +55,35 @@ To all of our cool customers, you can simply copy our pipeline implementation an
 Playing with different pipeline params is advised !<br>
 
 ## Personnel
-* Our team:
-	* Gydi:
-		* Project lead
-		* Data Engineer
-		* Data scientist(s)
-		* Customer support
-	* Client:
-		* Data administrator
-		* Head of science
+* **Data scientist (Daniel)** - A data scientist plays a crucial role in a project by using their skills in data
+analysis, machine learning, and statistical modeling to extract valuable insights and knowledge from
+data. They are responsible for collecting, cleaning, and organizing data from various sources, and
+using this data to build predictive models and make data-driven decisions. In addition to analyzing
+data, a data scientist may also be involved in communicating their findings to stakeholders and
+collaborating with other team members to implement data-driven solutions.<br>
+
+* **Data Engineer (Yossi)** - A data engineer plays a crucial role in a project by building the
+infrastructure to store, process, and analyze large amounts of data. They are responsible for
+designing, building, maintaining, and optimizing data pipelines to facilitate the efficient flow of
+data between systems. Data engineers work closely with data scientists and other team members to
+understand the data needs of the project and to ensure that the data is structured and organized in a
+way that is suitable for analysis.<br>
+* **Project Lead (Jonathan)** - A project lead plays a crucial role in a project by providing direction,
+leadership, and guidance to the team. They are responsible for managing the project from start to
+finish, including setting project goals and objectives, developing a project plan, and ensuring that
+the project is completed on time and within budget. The project lead works closely with team
+members to delegate tasks, monitor progress, and address any issues or challenges that arise. They
+also communicate with stakeholders, including clients, customers, and upper management, to keep
+them informed of the project's progress and to address any concerns or feedback.<br>
+* **Customer support (Guy)** - Customer support plays a crucial role in a project by providing assistance
+and support to customers or users of the product or service being developed. They are responsible
+for answering questions, troubleshooting issues, and helping customers to resolve problems.
+Customer support team members may also be responsible for gathering feedback and suggestions
+from customers, and providing this information to the project team to inform product development
+and improvement. They may work closely with other team members, such as product managers and
+developers, to ensure that customer needs and concerns are being addressed.
+The client for the dataset freMTPL2freq is a french insurance company. The client for the housing
+dataset is a real estate broker.
 	
 ## Metrics
 **What are the qualitative objectives?**<br>
