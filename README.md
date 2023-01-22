@@ -101,6 +101,7 @@ We will provide number of possible qualitative metrics: <br>
 
 **What is the baseline (current) value of the metric?**<br>
 We benchmark xgb regressor with two datasets, boston house price (2.87 MAE) and french motor (0.003 MAE) <br>
+In regards to the fairness of the baseline model, we discovered certain features that the model is unfair towards. Specifically, for the Boston dataset, the "Indus" feature resulted in bias, as both the "independence" and "seperation" terms of the "Dalex" module exceeded the epsilon range of 0.8 - 1.25 (the default range). This indicates that the model is biased. Similarly, for the French Motor dataset, the "exposure" feature caused an unfair model, with both the "independence" and "seperation" terms again exceeding the epsilon range of 0.8 - 1.25 <br>
 
 **How will we measure the metric?**<br>
 We will compare our improved baseline with market common implementations with several datasets.<br>
