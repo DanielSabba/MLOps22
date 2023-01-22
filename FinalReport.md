@@ -1,7 +1,7 @@
 # Final Report
 
 - Our Customers: Real estate agencies, insurance companies
-- Team Members: Daniel Sabba - Data Scientist, Jonathan Erell, Project Leader, Yossi Gavriel - Customer Support
+- Team Members: Daniel Sabba - Data Scientist, Jonathan Erell - Project Leader, Yossi Gavriel - Customer Support
 
 ## Overview
 Our company specializes in providing ML pipeline solutions to insurance companies and real estate agencies. Our goal is to help these businesses increase their income through the use of advanced ML techniques. Our solution includes a ML pipeline that addresses the common problems of unfairness and bias in models, as well as reducing the prediction runtime process and increasing overall performance.
