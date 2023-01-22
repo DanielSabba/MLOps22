@@ -54,7 +54,13 @@ The output of the pipeline is a cleaner dataset that is much more balanced, less
 
 The results section of the final report presents the outcome of the step-by-step pipeline applied to the given dataset for a regression task. First, a baseline model was trained on the original dataset to establish a baseline for comparison.
 
-**The first step** of the pipeline was to use feature selection to remove redundant features from the dataset. The results of this step, shown in an image, indicate that the model did not improve significantly but also did not worsen after removing 2 features from each dataset. This result is positive since almost 20% of the data was removed without harming the model.
+**The first step** of the pipeline was to use feature selection to remove redundant features from the dataset. The results of this step, shown in an image, indicate that the model did not improve significantly but also did not worsen after removing 2 features from each dataset. This result is positive since almost 20% of the data was removed without harming the model. 
+<div>
+  <img src="images/FS_boston.png" alt="Image 1" style="float:left; width:40%; margin-right:5%;"/>
+  <img src="images/FS_motor.png" alt="Image 2" style="float:left; width:40%;"/>
+</div>
+<div style="clear:both;"></div>
+<p>Figure 1: Feature Selection Method - Boston and French Motor Datasets</p>
 
 **The second step** was to remove outliers from the dataset using multiple methods such as Z-score, IQR range, and PyOD for univariate and multivariate features. The results, shown in an image, indicate that the model improved on both datasets after cleaning the dataset from outliers. Additionally, by cleaning a small amount of data, the model was made simpler and faster for later runs.
 
