@@ -35,10 +35,10 @@ french motor :
 * R2 0.0429
 
 housing baseline feature importance : 
-![housing_baseline](housing_baseline.jpeg)
+![housing_baseline](images/housing_baseline.jpeg)
 
 boston baseline feature importance : 
-![motor_baseline](motor_baseline.jpeg)
+![motor_baseline](images/motor_baseline.jpeg)
 
 ## Model Understanding
 
