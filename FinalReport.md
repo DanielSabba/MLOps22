@@ -64,9 +64,36 @@ The results section of the final report presents the outcome of the step-by-step
 
 **The second step** was to remove outliers from the dataset using multiple methods such as Z-score, IQR range, and PyOD for univariate and multivariate features. The results, shown in an image, indicate that the model improved on both datasets after cleaning the dataset from outliers. Additionally, by cleaning a small amount of data, the model was made simpler and faster for later runs.
 
+<div>
+  <img src="images/OD_boston.png" alt="Image 1" style="float:left; width:40%; margin-right:5%;"/>
+  <img src="images/OD_motor.png" alt="Image 2" style="float:left; width:40%;"/>
+</div>
+<div style="clear:both;"></div>
+<p>Figure 2: Outliers Removal Method - Boston and French Motor Datasets</p>
+
 **The third step** was to measure the model's fairness for each feature by checking for bias towards a particular feature or subgroup. If bias was found, the method of resampling or reweighting the feature was applied during the fitting of the pipeline. The results, shown in an image, indicate that the model improved significantly for the Boston dataset and less so for the Motor dataset, making it more generalized and less biased. Features such as Indus, CRIM, and PTRATIO were identified as biased and reweighting them resulted in better results for the Boston dataset.
+<div>
+  <img src="images/Boston_df.png" alt="Image 1" style="float:left; width:40%; margin-right:5%;"/>
+  <img src="images/Boston-Graph.png" alt="Image 2" style="float:left; width:40%;"/>
+</div>
+<div style="clear:both;"></div>
+<p>Figure 3: Fairness check on Boston's Dataset - Boston and French Motor Datasets</p>
+
+<div>
+  <img src="images/Dalex_boston.png" alt="Image 1" style="float:left; width:40%; margin-right:5%;"/>
+  <img src="images/Dalex_motor.png" alt="Image 2" style="float:left; width:40%;"/>
+</div>
+<div style="clear:both;"></div>
+<p>Figure 4: Dalex Fairness Method - Boston and French Motor Datasets</p>
 
 Finally, all the methods were combined in the order of feature elimination, outlier detection and removal, and unfairness detection. The results, to be discussed later, indicate that the model did not improve in terms of the MAE metric, but it was more generalized, less biased, and much faster.
+
+<div>
+  <img src="images/final_boston.png" alt="Image 1" style="float:left; width:40%; margin-right:5%;"/>
+  <img src="images/final_motor.png" alt="Image 2" style="float:left; width:40%;"/>
+</div>
+<div style="clear:both;"></div>
+<p>Figure 5: All methods combined - Boston and French Motor Datasets</p>
 
 ## Solution Architecture
 * **What data do we expect? Raw data in the customer data sources (e.g. on-prem files, SQL, on-prem Hadoop etc.)**
