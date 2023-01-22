@@ -22,71 +22,47 @@ The real estate industry is also a vital part of the economy, with the buying an
 
 Our solution will be beneficial for the insurance companies and real estate agencies, as it will help them to improve their pricing and underwriting process, detect fraud and predict claims, property valuations, and assist with property management.
 
-**How is it going to be consumed by the customer?**<br>
-To all of our cool customers, you can simply copy our pipeline implementation and run it in your environments.<br>
-Playing with different pipeline params is advised !<br>
+## Business Problems
 
-## Personnel
-* **Data scientist (Daniel)** - A data scientist plays a crucial role in a project by using their skills in data
-analysis, machine learning, and statistical modeling to extract valuable insights and knowledge from
-data. They are responsible for collecting, cleaning, and organizing data from various sources, and
-using this data to build predictive models and make data-driven decisions. In addition to analyzing
-data, a data scientist may also be involved in communicating their findings to stakeholders and
-collaborating with other team members to implement data-driven solutions.<br>
-* **Project Lead (Jonathan)** - A project lead plays a crucial role in a project by providing direction,
-leadership, and guidance to the team. They are responsible for managing the project from start to
-finish, including setting project goals and objectives, developing a project plan, and ensuring that
-the project is completed on time and within budget. The project lead works closely with team
-members to delegate tasks, monitor progress, and address any issues or challenges that arise. They
-also communicate with stakeholders, including clients, customers, and upper management, to keep
-them informed of the project's progress and to address any concerns or feedback.<br>
-* **Customer support (Yossi)** - Customer support plays a crucial role in a project by providing assistance
-and support to customers or users of the product or service being developed. They are responsible
-for answering questions, troubleshooting issues, and helping customers to resolve problems.
-Customer support team members may also be responsible for gathering feedback and suggestions
-from customers, and providing this information to the project team to inform product development
-and improvement. They may work closely with other team members, such as product managers and
-developers, to ensure that customer needs and concerns are being addressed.
-The client for the dataset freMTPL2freq is a french insurance company. The client for the housing
-dataset is a real estate broker.
-	
-## Metrics
-**What are the qualitative objectives?**<br>
-We will provide number of possible qualitative objectives: <br>
-* Providing a more scalable ML framework <br>
-* Less biased predictor <br>
+The business problem that our solution aims to address is the issue of bias and unfairness in models used by insurance companies and real estate agencies. These industries rely heavily on data-driven decision making, and the use of ML models is becoming increasingly common. However, these models can be prone to bias and unfairness, which can lead to incorrect predictions and poor decision making.
 
-**What are the quantifiable metric?** <br>
-We will provide number of possible qualitative metrics: <br>
-* Reducing machine learning research time <br>
-* Improvement of your baselines scores by providing generic pipelines <br>
-* Increase baseline models' MAE <br>
-* Quantify what improvement in the values of the metrics are useful for the customer scenario <br>
-* Performing generic feature-selection, data reweighting and cleaning will ensure reduced deployment time and increase model scores <br>
+One specific use case in the insurance industry is the underwriting process. Insurance companies use models to underwrite risks and price policies. However, if these models are biased, they may incorrectly assess the risk of certain individuals or groups, leading to higher prices for some and lower prices for others. This can result in unfair treatment of customers and can also lead to financial losses for the company.
 
-**What is the baseline (current) value of the metric?**<br>
-We benchmark xgb regressor with two datasets, boston house price (2.87 MAE) and french motor (0.003 MAE) <br>
-In regards to the fairness of the baseline model, we discovered certain features that the model is unfair towards. Specifically, for the Boston dataset, the "Indus" feature resulted in bias, as both the "independence" and "seperation" terms of the "Dalex" module exceeded the epsilon range of 0.8 - 1.25 (the default range). This indicates that the model is biased. Similarly, for the French Motor dataset, the "exposure" feature caused an unfair model, with both the "independence" and "seperation" terms again exceeding the epsilon range of 0.8 - 1.25 <br>
+Another use case in the real estate industry is the property valuations. Real estate companies use models to predict property prices and assist with property management. However, if these models are biased, they may undervalue or overvalue properties, leading to incorrect pricing decisions and financial losses for the company.
 
-**How will we measure the metric?**<br>
-We will compare our improved baseline with market common implementations with several datasets.<br>
+The exact use case for our solution is to decrease the bias and unfairness in the models used by insurance companies and real estate agencies. Our solution will improve the underwriting and pricing processes, detect fraud and predict claims, property valuations, and assist with property management. By providing
 
-## Plan
-* Phase 1 - Explenatory data analysis. deadline - 24/12
-  * Understand data features, behaviour, missing values and statistics.
-  * Clean and log postprocessed data.
-* Phase 2 - Creating baseline models. deadline - 28/12
-  * What are the common models used on our dataset
-  * Benchmark common models performance (MAE) 
-* Phase 3 - Benchmark our propesed approches for improving client's ML. deadline - 5/1
-  * Data preprocess (outlier removal).
-  * Feature selection - best models to use.
-  * Implement Dalex package to measure fairness.
-* Phase 4 - Create a pipeline with best approaches. deadline - 31/1
-  * Figure out the best tools to use (iguazio platform).
-  * Encapsulate our methods in one generic pipeline.
+fair and unbiased models, our solution will enable these companies to make more accurate and fair decisions, leading to improved performance and increased income.
 
-## Architecture
+In summary, the business problem that our solution aims to address is the issue of bias and unfairness in models used by insurance companies and real estate agencies, which can lead to incorrect predictions, poor decision making, and financial losses for the company.
+
+## Data Processing
+
+Our pipeline's mission is to prepare the dataset for a regression task. The dataset contains both numeric and categorical features.
+
+The first step in the pipeline is to replace the categorical features with one-hot encoding. This converts categorical variables into multiple binary variables, allowing them to be used in the model.
+
+The second step is to use feature selection methods to remove redundant features from the dataset. We used multiple algorithms such as F-regression, R-regression, and mutual information regression to identify and select the most relevant features.
+
+The third step is to remove outliers from the dataset using multiple algorithms. We used the Z-score method, IQR range, Local Outlier Factor (LOF) for multivariate outliers, and Angle-Based Outlier Detection (ABOD) method for multivariate outliers to identify and remove outliers.
+
+The last step is to use the Dalex module to mitigate bias in the model by either resampling indices from the dataset or adding weights to specific samples. This step ensures that the model is less biased and more balanced.
+
+The output of the pipeline is a cleaner dataset that is much more balanced, less biased, and probably smaller than the original dataset. This cleaned dataset is then used as the input for the regression model.
+
+### Modeling, Validation
+
+The results section of the final report presents the outcome of the step-by-step pipeline applied to the given dataset for a regression task. First, a baseline model was trained on the original dataset to establish a baseline for comparison.
+
+**The first step** of the pipeline was to use feature selection to remove redundant features from the dataset. The results of this step, shown in an image, indicate that the model did not improve significantly but also did not worsen after removing 2 features from each dataset. This result is positive since almost 20% of the data was removed without harming the model.
+
+**The second step** was to remove outliers from the dataset using multiple methods such as Z-score, IQR range, and PyOD for univariate and multivariate features. The results, shown in an image, indicate that the model improved on both datasets after cleaning the dataset from outliers. Additionally, by cleaning a small amount of data, the model was made simpler and faster for later runs.
+
+**The third step** was to measure the model's fairness for each feature by checking for bias towards a particular feature or subgroup. If bias was found, the method of resampling or reweighting the feature was applied during the fitting of the pipeline. The results, shown in an image, indicate that the model improved significantly for the Boston dataset and less so for the Motor dataset, making it more generalized and less biased. Features such as Indus, CRIM, and PTRATIO were identified as biased and reweighting them resulted in better results for the Boston dataset.
+
+Finally, all the methods were combined in the order of feature elimination, outlier detection and removal, and unfairness detection. The results, to be discussed later, indicate that the model did not improve in terms of the MAE metric, but it was more generalized, less biased, and much faster.
+
+## Solution Architecture
 * **What data do we expect? Raw data in the customer data sources (e.g. on-prem files, SQL, on-prem Hadoop etc.)**
   * We are expecting that the clients data will be on-prem csv files (structured).
   * Sampled data enough for modeling 
@@ -108,13 +84,3 @@ We will compare our improved baseline with market common implementations with se
 * **Make a 1 slide diagram showing the end to end data flow and decision architecture**
   ![my diagram](my_diagram.jpg)
     * If there is a substantial change in the customer's business workflow, make a before/after diagram showing the data flow.
-
-## Communication
-**Our team for this project:**<br>
-
-* Daniel Sabba
-* Yossi Gavriel
-* Jonathan Erell
-
-<br>
-As a providers of ML pipelines for companies, we regularly meet with clients from various industries, such as insurance companies and real estate agencies. During these meetings, we typically meet with the client's point-of-contact, who is often a member of the management team or a department head. The purpose of these meetings is to discuss the client's specific needs and how my company can help improve their success through the use of ML models. During the meeting, we will discuss the client's current business challenges, their data availability and the specific areas where they are looking to improve their performance. We will also present examples of how our company has helped similar companies in the past and the potential benefits they could expect from working with us. We will also discuss the scope of the project, timelines and budgets. These meetings are an opportunity for us to understand the client's business and to tailor our solutions to their specific requirements.
