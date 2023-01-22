@@ -36,16 +36,16 @@ The only hypter parameter is the random_state.
 
 ## Results
 housing pipeline feature importance : 
-![housing_baseline](housing_pipeline.jpeg)
+![housing_baseline](images/housing_pipeline.jpeg)
 
 boston pipeline feature importance : 
-![motor_baseline](motor_pipeline.jpeg)
+![motor_baseline](images/motor_pipeline.jpeg)
 
 housing voting (feature-selection) : 
-![housing_baseline](housing_fs.jpeg)
+![housing_baseline](images/housing_fs.jpeg)
 
 motor voting (feature-selection) : 
-![motor_baseline](motor_fs.jpeg)
+![motor_baseline](images/motor_fs.jpeg)
 
 * boston scores :
 MSE 13.274 <br>
