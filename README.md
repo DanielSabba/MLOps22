@@ -55,6 +55,8 @@ Quartiles are values that divide a dataset into four equal parts. The first quar
 	Where n is the number of values in the dataset.
 	Outliers can then be identified as values that are more than x times the IQR below Q1 or above Q3.
 
+In addition to the formulas previously mentioned, we will utilize the PyOD module to identify outliers for later removal.
+
 
 **How is it going to be consumed by the customer?**<br>
 To all of our cool customers, you can simply copy our pipeline implementation and run it in your environments.<br>
@@ -67,13 +69,6 @@ data. They are responsible for collecting, cleaning, and organizing data from va
 using this data to build predictive models and make data-driven decisions. In addition to analyzing
 data, a data scientist may also be involved in communicating their findings to stakeholders and
 collaborating with other team members to implement data-driven solutions.<br>
-
-* **Data Engineer (Yossi)** - A data engineer plays a crucial role in a project by building the
-infrastructure to store, process, and analyze large amounts of data. They are responsible for
-designing, building, maintaining, and optimizing data pipelines to facilitate the efficient flow of
-data between systems. Data engineers work closely with data scientists and other team members to
-understand the data needs of the project and to ensure that the data is structured and organized in a
-way that is suitable for analysis.<br>
 * **Project Lead (Jonathan)** - A project lead plays a crucial role in a project by providing direction,
 leadership, and guidance to the team. They are responsible for managing the project from start to
 finish, including setting project goals and objectives, developing a project plan, and ensuring that
@@ -81,7 +76,7 @@ the project is completed on time and within budget. The project lead works close
 members to delegate tasks, monitor progress, and address any issues or challenges that arise. They
 also communicate with stakeholders, including clients, customers, and upper management, to keep
 them informed of the project's progress and to address any concerns or feedback.<br>
-* **Customer support (Guy)** - Customer support plays a crucial role in a project by providing assistance
+* **Customer support (Yossi)** - Customer support plays a crucial role in a project by providing assistance
 and support to customers or users of the product or service being developed. They are responsible
 for answering questions, troubleshooting issues, and helping customers to resolve problems.
 Customer support team members may also be responsible for gathering feedback and suggestions
@@ -120,11 +115,11 @@ We will compare our improved baseline with market common implementations with se
   * What are the common models used on our dataset
   * Benchmark common models performance (MAE) 
 * Phase 3 - Benchmark our propesed approches for improving client's ML. deadline - 5/1
-  * Data preprocess (one-hot-encoding, imputing, mapping, outlier removal).
+  * Data preprocess (outlier removal).
   * Feature selection - best models to use.
   * Implement Dalex package to measure fairness.
 * Phase 4 - Create a pipeline with best approaches. deadline - 31/1
-  * Figure out the best tools to use (e.g. TF pipeline, kubeflow-pipeline, iguazio platform).
+  * Figure out the best tools to use (iguazio platform).
   * Encapsulate our methods in one generic pipeline.
 
 ## Architecture
@@ -134,10 +129,10 @@ We will compare our improved baseline with market common implementations with se
 
 * **What tools and data storage/analytics resources will be used in the solution**
   * Pandas for data storage
-  * SKlearn's stat filters and models.
-  * SKlearn's pipeline for pipeline creation.
-  * Dalex package.
-  * math, numpy.
+  * SKlearn's stat filters and models
+  * SKlearn's pipeline for pipeline creation
+  * Dalex package
+  * PyOD package
   
 * **How will the score or operationalized web service(s) (RRS and/or BES) be consumed in the business workflow of the customer? If applicable, write down pseudo code for the APIs of the web service calls.**
   * Our pipeline will be fused in each of the data-scientists day-to-day work, with easy implementation and customization, providing better performance than common base model with plug-and-evaluate approach
@@ -156,13 +151,6 @@ We will compare our improved baseline with market common implementations with se
 * Daniel Sabba
 * Yossi Gavriel
 * Jonathan Erell
-* Guy Sedan
+
 <br>
-The point of contact from the point of view of the client side is Yossi Gavriel.
-We will meet via Zoom for a meeting of two hours once a week to update each other about our
-progress. At these meetings, each team member will have an opportunity to ask questions about
-things that prevent him from making progress, and other team members will help him to find
-solutions. If nobody can help, we will forward the question to the course lecturer. At these meetings,
-each team member will also have an opportunity to propose new ideas, and the team will decide
-whether it is a good idea for the project. We will also communicate via a group in WhatsApp,
-mainly for administrative tasks such as scheduling weekly meetings.
+As a providers of ML pipelines for companies, we regularly meet with clients from various industries, such as insurance companies and real estate agencies. During these meetings, we typically meet with the client's point-of-contact, who is often a member of the management team or a department head. The purpose of these meetings is to discuss the client's specific needs and how my company can help improve their success through the use of ML models. During the meeting, we will discuss the client's current business challenges, their data availability and the specific areas where they are looking to improve their performance. We will also present examples of how our company has helped similar companies in the past and the potential benefits they could expect from working with us. We will also discuss the scope of the project, timelines and budgets. These meetings are an opportunity for us to understand the client's business and to tailor our solutions to their specific requirements.
