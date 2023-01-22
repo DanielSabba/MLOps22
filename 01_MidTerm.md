@@ -149,7 +149,7 @@ We will compare our improved pipeline that holds feature-selection, outlier-dete
 * **Data movement pipeline in production**
   * The client has the ability to set a scheduler on the given pipeline to allow continues flow, always producing data, running the pipeline, generate plots, explore and repeat.
 * **Make a 1 slide diagram showing the end to end data flow and decision architecture**
-  ![my diagram](my_diagram.jpg)
+  ![my diagram](images/my_diagram.jpg)
     * If there is a substantial change in the customer's business workflow, make a before/after diagram showing the data flow.
 
 ## Communication
