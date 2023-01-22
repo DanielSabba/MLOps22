@@ -120,7 +120,8 @@ Finally, all the methods were combined in the order of feature elimination, outl
 
 ## Learnings
 
-**We have learnt some potential learnings around the customer engagement process:**
+**Project Execution**
+We have learnt some potential learnings around the customer engagement process:
 
 * Understanding the customer's pain points: By engaging with your customers, you have likely gained a deep understanding of the specific challenges they face and the areas where they need the most help.
 
@@ -135,3 +136,21 @@ Finally, all the methods were combined in the order of feature elimination, outl
 * Building a good reputation: Good customer engagement leads to good reputation among the customers, which leads to more business opportunities.
 
 * Building long-term relationships: Engaging with your customers on a regular basis helps to build long-term relationships, which can lead to repeat business and positive word-of-mouth recommendations.
+
+**Data Science**
+
+Through our experience in the field of data science, we have gained multiple insights:
+* Implementing data cleaning algorithms can significantly improve the efficiency and ease of the learning process.
+* By adjusting the data using both the Dalex module and outlier detection, we have gained a deeper understanding of the data.
+* Even if combining multiple methods together in the pipeline does not improve the model's accuracy, each method individually can provide benefits.
+* While the model's accuracy may not have improved based on its metrics, other aspects such as generalization, the size of the dataset used, runtime, and bias may have improved.
+
+**Specific Challenges**
+One of the major challenges faced during this project was the nature of the data. Both the insurance company's and French motor's datasets were sourced from real-life scenarios, which resulted in them being inherently biased and containing outliers. A significant portion of our efforts was dedicated to cleaning and preprocessing the data, utilizing various methods to make it more manageable and suitable for learning. The goal was to reduce bias and increase generalizability in order to improve the effectiveness of our models.
+
+## Links
+https://github.com/DanielSabba/MLOps22
+
+## Future Work
+Based on the results obtained during this project, we believe that there are several areas that merit further exploration in future work. One potential avenue for improvement is to utilize different datasets with higher dimensions and more features. The datasets used in this project were preprocessed and clean, which may have resulted in suboptimal performance. Utilizing "dirtier" and more extensive datasets may yield better results. Additionally, we may experiment with different random seeds for solutions that rely on randomness. For example, in the case of the Dalex fairness model, we observed that different random seeds sometimes resulted in worse models, and not always improved the model. Another area to explore is trying different combinations of our solutions, such as altering the order of feature selection, outliers removal, and fairness check. Lastly, we may also consider tuning the hyperparameters for Dalex, outliers removal and feature selection to further optimize the performance of our models.
+
