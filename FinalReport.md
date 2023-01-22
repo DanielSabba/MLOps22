@@ -122,16 +122,16 @@ Finally, all the methods were combined in the order of feature elimination, outl
 
 **We have learnt some potential learnings around the customer engagement process:**
 
-* <u>Understanding the customer's pain points<\u>: By engaging with your customers, you have likely gained a deep understanding of the specific challenges they face and the areas where they need the most help.
+* Understanding the customer's pain points: By engaging with your customers, you have likely gained a deep understanding of the specific challenges they face and the areas where they need the most help.
 
-* <u>Building trust:<\u> Building trust with your customers is crucial for any business, and it is likely that you have developed a strong rapport with your insurance company and real estate agency clients through your engagement process.
+* Building trust: Building trust with your customers is crucial for any business, and it is likely that you have developed a strong rapport with your insurance company and real estate agency clients through your engagement process.
 
-Communicating effectively: Engaging with your customers has likely helped you to develop effective communication strategies that allow you to clearly explain the value of your services and how they can help the customers to achieve their goals.
+* Communicating effectively: Engaging with your customers has likely helped you to develop effective communication strategies that allow you to clearly explain the value of your services and how they can help the customers to achieve their goals.
 
-Adapting to customer's needs: Customer engagement allows you to understand the unique needs of your clients, and adapt your solutions to better meet those needs.
+* Adapting to customer's needs: Customer engagement allows you to understand the unique needs of your clients, and adapt your solutions to better meet those needs.
 
-Learning about the industry trends: Engaging with your customers also allows you to stay up-to-date on industry trends and changes, which can help you to identify new opportunities for growth and innovation.
+* Learning about the industry trends: Engaging with your customers also allows you to stay up-to-date on industry trends and changes, which can help you to identify new opportunities for growth and innovation.
 
-Building a good reputation: Good customer engagement leads to good reputation among the customers, which leads to more business opportunities.
+* Building a good reputation: Good customer engagement leads to good reputation among the customers, which leads to more business opportunities.
 
-Building long-term relationships: Engaging with your customers on a regular basis helps to build long-term relationships, which can lead to repeat business and positive word-of-mouth recommendations.
+* Building long-term relationships: Engaging with your customers on a regular basis helps to build long-term relationships, which can lead to repeat business and positive word-of-mouth recommendations.
