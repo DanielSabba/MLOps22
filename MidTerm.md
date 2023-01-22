@@ -6,6 +6,12 @@ Business clients in the field of real estate that use machine learning could inc
 
 Business clients in the field of insurance that use machine learning typically do so to improve their underwriting processes, fraud detection, and claims management.<br> By analyzing large amounts of data, insurance companies can build machine learning models that can identify patterns and trends that might not be immediately obvious to humans.<br> These models can then be used to make more accurate predictions about the likelihood of certain events occurring, such as the probability of a claim being filed or the likelihood of a policyholder experiencing a loss.<br> This can help insurance companies to make more informed decisions about which risks to insure and at what cost, ultimately leading to more efficient and effective operations.
 
+Developing machine learning pipelines in production can be challenging, and a framework has to be introduced.
+By providing deep introduction to Iguazio's community edition framework and creating a complex pipeline to help them derive insights, generate plots and do data exploration.
+A complax pipeline can help those companies to derive insights about their data features using feature selection and data reweighing, concluding what has to be emphasized when making a deal.
+Or the understand what samples are considered outliers in their data using outlier-detection, to detect what transactions are "suspicious".
+
+
 ## Scope
 **What data science solutions are we trying to build?**<br>
 As a solution to our research question, we aim to develop generic pipeline that will clean, preprocess and transform all data types.<br>
@@ -105,7 +111,7 @@ We benchmark xgb regressor with two datasets, boston house price (2.87 MAE) and 
 In regards to the fairness of the baseline model, we discovered certain features that the model is unfair towards. Specifically, for the Boston dataset, the "Indus" feature resulted in bias, as both the "independence" and "seperation" terms of the "Dalex" module exceeded the epsilon range of 0.8 - 1.25 (the default range). This indicates that the model is biased. Similarly, for the French Motor dataset, the "exposure" feature caused an unfair model, with both the "independence" and "seperation" terms again exceeding the epsilon range of 0.8 - 1.25 <br>
 
 **How will we measure the metric?**<br>
-We will compare our improved baseline with market common implementations with several datasets.<br>
+We will compare our improved pipeline that holds feature-selection, outlier-detection and data reweighing abilities to the baseline modes, we will explore the generated insights on the given train datasets and measure its reliability and performance.<br>
 
 ## Plan
 * Phase 1 - Explenatory data analysis. deadline - 24/12
@@ -129,18 +135,19 @@ We will compare our improved baseline with market common implementations with se
 
 * **What tools and data storage/analytics resources will be used in the solution**
   * Pandas for data storage
-  * SKlearn's stat filters and models
-  * SKlearn's pipeline for pipeline creation
-  * Dalex package
-  * PyOD package
+  * SKlearn's stat filters and models.
+  * SKlearn's pipeline for pipeline creation.
+  * Dalex package.
+  * math, numpy.
+  * Pyod functions for outlier removal
+  * MLruns function marketplace
   
 * **How will the score or operationalized web service(s) (RRS and/or BES) be consumed in the business workflow of the customer? If applicable, write down pseudo code for the APIs of the web service calls.**
-  * Our pipeline will be fused in each of the data-scientists day-to-day work, with easy implementation and customization, providing better performance than common base model with plug-and-evaluate approach
+  *  Using our pipelines with the different abilities will generate various plots for analysts and stakeholders to derive insights - imporve sales and 	shrink expenses. 
 * **How will the customer use the model results to make decisions**
-  * The customer will view model scores and will decide whether to choose different pipeline params or not.
+  * the customer will analyze the generated plots.
 * **Data movement pipeline in production**
-  * In production, a serving function / serving graph holding the pipeline implementation for easy data manipulation in production.
-  * When files are stored on cloud providers, proper credentials has to be declared. ()
+  * The client has the ability to set a scheduler on the given pipeline to allow continues flow, always producing data, running the pipeline, generate plots, explore and repeat.
 * **Make a 1 slide diagram showing the end to end data flow and decision architecture**
   ![my diagram](my_diagram.jpg)
     * If there is a substantial change in the customer's business workflow, make a before/after diagram showing the data flow.
