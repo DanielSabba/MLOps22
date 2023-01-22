@@ -14,7 +14,13 @@ further more we wish to imporve our data with feature selection techniques and d
 
 In our pipeline, we will also check the fairness of the model. The data we use for modeling is mostly a reflection of the real world, and the real world can be biased, so the data and therefore the model will likely reflect that bias. To check the fairness of the model, we will examine each feature of our dataset to see if it is biased by a subclass of that feature. For example, we might define a group based on the sex of the sample, and a subgroup based on age. We might then define the privileged subgroup as old males, who may be privileged in cases of house pricing.
 
-To check for bias in each feature, we will use the Dalex package to measure fairness. If we detect unfairness, we will try one or both of the following options:
+To check for bias in each feature, we will use the Dalex package to measure fairness, where fairness check is being checked as follows:
+- Defining $ \epsilon = 0.8 $ as default
+- Calculate separation (R \indep A | Y), independence (R \indep A) and sufficieny (Y \indep A | R), where R is the model's predictions, A is te protected group, and Y is the target.
+- Check for each term mentioned above, whether a model is not in the range of $ \epsilon - 1 / \epsilon $
+- If two conditions are not met, the model is said to be biased towards such feature
+
+If we detect unfairness, we will try one or both of the following options:
 
  - Reweighting the data: We will obtain weights for the model training pipeline and mitigate bias in statistical parity. This method will produce weights for the given subgroup for each class.
 
