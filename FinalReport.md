@@ -73,7 +73,7 @@ The results section of the final report presents the outcome of the step-by-step
 
 **The third step** was to measure the model's fairness for each feature by checking for bias towards a particular feature or subgroup. If bias was found, the method of resampling or reweighting the feature was applied during the fitting of the pipeline. The results, shown in an image, indicate that the model improved significantly for the Boston dataset and less so for the Motor dataset, making it more generalized and less biased. Features such as Indus, CRIM, and PTRATIO were identified as biased and reweighting them resulted in better results for the Boston dataset.
 <div>
-  <img src="images/Boston_df.png" alt="Image 1" style="float:left; width:40%; margin-right:5%;"/>
+  <img src="images/Boston-df.png" alt="Image 1" style="float:left; width:40%; margin-right:5%;"/>
   <img src="images/Boston-Graph.png" alt="Image 2" style="float:left; width:40%;"/>
 </div>
 <div style="clear:both;"></div>
